@@ -1,0 +1,71 @@
+
+\documentclass[twoside,leqno,twocolumn]{article}
+\usepackage{ltexpprt}
+\usepackage{subfigure}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{caption}
+\newcommand{\argmin}{\arg\!\min}
+
+
+
+\begin{document}
+%\setcounter{chapter}{2} % If you are doing your chapter as chapter one,
+%\setcounter{section}{3} % comment these two lines out.
+
+\title{Detecting Group Absenteeism in Twitter: Algorithms and Applications}
+\author{Fang Jin\thanks{Discovery Analytics Center, Department of Computer Science, Virginia Tech.} \\
+\and
+Feng Chen\thanks{Department of Computer Science, University at Albany, SUNY.}\\
+\and
+Chang-Tien Lu\footnotemark[1]\\
+\and
+Naren Ramakrishnan\footnotemark[1]\\
+}
+\date{}
+\maketitle
+
+
+
+%\pagenumbering{arabic}
+%\setcounter{page}{1}%Leave this line commented out.
+
+\begin{abstract} \small\baselineskip=9pt Significant attention has been paid to modeling bursts and upticks in social media activity (e.g., Twitter and Facebook shares). An important but unstudied problem is the detection of group absenteeism wherein an unusually low level of activity is observed in a specific spatio-temporal slice of the data. We present the first study to systematically investigate group absenteeism in Twitter. Two practical approaches are developed to detect group absenteeism motivated by different viewpoints. The first approach merges clustering with a rectangle modeling to identify spatially connected dense clusters. The second approach uses a minimum weight subgraph modeling under subgraph diameter constraints. We analyze the strengths and weakness of these two approaches and demonstrate their application to Twitter datasets over Latin America. In particular, we illustrate how the modeling of group absenteeism could shed insight into event detection.\end{abstract}
+
+
+\section{Introduction.} \label{sec:intro}
+\input{tex/1introduction.tex}
+%
+\section{Related work} \label{sec:related}
+\input{tex/2related.tex}
+%
+\section{Problem formulation} \label{sec:problem}
+\input{tex/3problem.tex}
+
+\section{Absenteeism group detection algorithms} \label{sec:algorithm}
+\input{tex/4algorithm.tex}
+%
+\section{Experimental results} \label{sec:experiemnt}
+\input{tex/5experiment.tex}
+
+\section{Conclusion} \label{sec:conclusion}
+\input{tex/6conclusion.tex}
+
+
+%\begin{thebibliography}{99}
+%\bibliography{sigproc}
+
+\bibliographystyle{IEEEtran}
+\bibliography{sigproc}
+
+%\end{thebibliography}
+\end{document}
+
+% End of ltexpprt.tex
+%
+
+

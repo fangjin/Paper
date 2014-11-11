@@ -1,0 +1,24 @@
+%\section{Related Work}
+\paragraph{Burst event detection:}
+Lappas et al.~\cite{lappas2009burstiness} define the temporal burstiness of a term using
+the term frequency within one time interval, divided by the whole test period, and then 
+minus the average term frequency. The authors further generalized their approach to detecting spatiotemporal bursts of certain terms in geocoded document streams~\cite{lappas2012spatiotemporal}. They use axis-oriented rectangles to constrain the selected regions to be spatially connected. Garcia-Gasulla et al.~\cite{garcia2014detection} discovered events based on collaborative social network data. Sakaki at al.~\cite{sakaki2010earthquake} considered Twitter users as social sensors to detect earthquakes. Rozenshtein et al.~\cite{rozenshtein2014event} detect events by capturing the compactness of a graph.
+
+\paragraph{Spatial clustering:}
+Spatial clustering groups the objects in a spatial data set and identifies contiguous regions in the space of the spatial attributes. Ng and Han~\cite{ng1994cient} proposed a clustering method called CLARANS based on randomized search that does not explicitly handle noise and requires users to predefine the number 
+of clusters. Ester et al.~\cite{ester1996density} developed the density-based DBSCAN method
+that is able to detect free shape clusters and does not require users to define the number of clusters. Cao et al.~\cite{cao2013analyzing} propose a supervised approach by using interestingness functions which assess the quality of spatial clusters based on uniformity measures to capture a domain expert's notion of uniformity. Recently, Rodriguez and Laio~\cite{rodriguez2014clustering} proposed a fast search clustering method to identify density peaks, which can remove outliers at the same time and does not require any predefined parameters.
+
+\paragraph{Graph partitioning:}
+The problem of graph partitioning consists of dividing the vertices in $g$ groups of predefined size, such that the number of edges lying between the groups is minimal~\cite{fortunato2010community}. The most popular algorithm is built around the idea of using centrality indices to find community boundaries~\cite{girvan2002community}. 
+\iffalse
+This algorithm is an iterative process with three components in each iteration: 1. Computation of the centrality for all edges;
+2. Removal of edge with largest centrality: in case of ties with other edges, one of them is picked at random;
+3. Recalculation of centralities for all the edges.
+\fi
+Karypis et al. developed a set of algorithms for partitioning graphs based on the the proposed multilevel recursive-bisection, multilevel k-way, and multi-constraint partitioning schemes~\cite{karypis2003multi, abou2006multilevel, lasalle2013multi}.
+
+\noindent
+As stated earlier our goal, distinct from burstiness detection, is to
+design efficient algorithms for maximizing absenteeism score functions over possible groups.
+Two different scenarios are considered. When data objects have geographic coordinates, we consider spatial clustering techniques to enforce spatial coherence of data objects in a possible absenteeism group. When data objects are organized as vertices in a general graph, we apply graph partitioning techniques to enforce graph coherence of data objects in a possible absenteeism group.
